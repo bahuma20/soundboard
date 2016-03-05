@@ -1,0 +1,22 @@
+{
+  "name": "baze-soundboard",
+  "authors": [
+    "Max Bachhuber <bahuma20@bahuma.io>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.1.2",
+    "handlebars": "~4.0.5"
+  }
+}

@@ -1,0 +1,15 @@
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header {
+    display: block; } }
+.mdl-layout__header-row {
+  padding-left: 16px; }
+
+.mdl-layout__content {
+  padding: 16px; }
+
+.page-content .entry {
+  margin-bottom: 1em; }
+  .page-content .entry:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=theme.css.map */
