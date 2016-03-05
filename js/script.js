@@ -4,8 +4,44 @@ var template = Handlebars.compile(source);
 var data = {
  entries: [
    {
-       title: 'Happy Birthday',
-       file: 'happy_birthday.mp3'
+     title: 'Baze weint',
+     file: '01_baze_weint.mp3'
+   },
+   {
+     title: 'Ejtz is schee woarm',
+     file: '02_ejtz_is_schee_woarm.mp3'
+   },
+   {
+     title: 'Etz kummt d\' Sonne',
+     file: '03_etz_kummt_d_sonne.mp3'
+   },
+   {
+     title: 'Göi',
+     file: '04_goei.mp3'
+   },
+   {
+     title: 'Happy Birthday',
+     file: '05_happy_birthday.mp3'
+   },
+   {
+     title: 'Hod da Baze gsogt',
+     file: '06_hod_da_baze_gsogt.mp3'
+   },
+   {
+     title: 'Is cool',
+     file: '07_is_cool.mp3'
+   },
+   {
+     title: 'Mei der Baze',
+     file: '08_mei_der_baze.mp3'
+   },
+   {
+     title: 'Ruhe!',
+     file: '09_ruhe.mp3'
+   },
+   {
+     title: 'Spinnts wieder, göi',
+     file: '10_spinnts_wieder_goei.mp3'
    }
  ]
 };
