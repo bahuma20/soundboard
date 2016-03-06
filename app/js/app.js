@@ -2,6 +2,5 @@
 
 angular.module('soundboardApp', [
   'ngRoute',
-  'firebase',
-  'ngAudio'
+  'firebase'
 ]);
