@@ -23,7 +23,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffab40",
+  "theme_color": "#FFAB40",
   "background_color": "#FAFAFA",
   "start_url": "/#/",
   "display": "standalone"
