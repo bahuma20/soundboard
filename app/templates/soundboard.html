@@ -1,0 +1,26 @@
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+
+      <span class="mdl-layout-title">{{soundboard.title}} Soundboard</span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-list">
+        <div class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries">
+          <span class="mdl-list__item-primary-content">
+            <button ng-click="togglePlaySound(entry)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-list__item-avatar" ng-class="{'mdl-button--colored': entryCurrentlyPlaying(entry)}">
+              <i class="material-icons" ng-if="!entryCurrentlyPlaying(entry)">play_arrow</i>
+              <i class="material-icons" ng-if="entryCurrentlyPlaying(entry)">stop</i>
+            </button>
+            <span>{{entry.title}}</span>
+            <span class="mdl-list__item-sub-title">{{entry.playCount}}x abgespielt</span>
+          </span>
+          <!--<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>-->
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,28 @@
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+
+      <span class="mdl-layout-title">Soundboards</span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" target="_blank" href="https://bahuma.io/max/facebook">Facebook</a>
+        <a class="mdl-navigation__link" target="_blank" href="https://bahuma.io/max/twitter">Twitter</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col-desktop" ng-repeat="entry in entries" ng-click="openSoundboard(entry.slug)">
+          <div class="entry-content" style="background: {{entry.color}}">
+            <img class="image" ng-src="{{entry.image}}">
+            <div class="title">{{entry.title}}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>

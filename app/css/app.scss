@@ -9,15 +9,15 @@
 }
 
 .mdl-layout__content {
-  padding: 16px;
+  //padding: 16px;
 }
 
 .page-content {
   .entry {
     margin-bottom: 1em;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+  &:last-child {
+     margin-bottom: 0;
+   }
   }
 }
