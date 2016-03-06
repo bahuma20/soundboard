@@ -1,12 +1,12 @@
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
     <div class="mdl-layout__header-row">
-
       <span class="mdl-layout-title">{{soundboard.title}} Soundboard</span>
     </div>
   </header>
   <main class="mdl-layout__content">
     <div class="page-content">
+      <!--<button ng-click="auth.$unauth()">Logout</button>-->
 
       <div class="mdl-list">
         <div class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries">
@@ -18,9 +18,24 @@
             <span>{{entry.title}}</span>
             <span class="mdl-list__item-sub-title">{{entry.playCount}}x abgespielt</span>
           </span>
-          <!--<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>-->
+          <a class="mdl-list__item-secondary-action" href="" ng-click="toggleFav(entry)"><i class="material-icons fav-star" ng-class="{'inactive': !entryIsFavorized(entry)}">star</i></a>
         </div>
       </div>
     </div>
   </main>
 </div>
+
+<dialog id="auth-dialog" class="mdl-dialog">
+  <h4 class="mdl-dialog__title">Login</h4>
+  <div class="mdl-dialog__content">
+    <p>
+      Um Favoriten speichern zu können, müssen Sie sich einloggen.
+      Das geht ganz einfach über Ihr Facebook oder Google-Konto.
+      Wir werden niemals ohne Ihre Erlaubnis etwas posten.
+    </p>
+  </div>
+  <div class="mdl-dialog__actions">
+    <button type="button" class="mdl-button" ng-click="auth.$authWithOAuthPopup('facebook')">Mit Facebook einloggen</button>
+    <button type="button" class="mdl-button close" ng-click="auth.$authWithOAuthPopup('google')">Mit Google einloggen</button>
+  </div>
+</dialog>

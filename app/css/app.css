@@ -9,4 +9,7 @@
   .page-content .entry:last-child {
     margin-bottom: 0; }
 
+.fav-star.inactive {
+  color: #757575; }
+
 /*# sourceMappingURL=app.css.map */
