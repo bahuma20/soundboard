@@ -16,18 +16,12 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
         // Create a firebase ref for the specific board
         var boardRef = new Firebase('https://bahuma-soundboard.firebaseio.com/soundboards/' + boardKey);
         $scope.soundboard = $firebaseObject(boardRef);
-        onCollectionLoaded();
-
         $scope.entries = $firebaseArray(boardRef.child('entries'));
       });
     } else {
       $location.path('/');
     }
   });
-
-  var onCollectionLoaded = function () {
-    // Executed after the collection $scope.entries has been created
-  };
 
   $scope.togglePlaySound = function (entry) {
     if ($scope.player) {
