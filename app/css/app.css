@@ -12,6 +12,8 @@
 .fav-star.inactive {
   color: #757575; }
 
+.soundboard .mdl-layout__header-row {
+  padding-right: 16px; }
 .soundboard .mdl-navigation .mdl-navigation__link {
   padding-right: 0; }
 
@@ -22,5 +24,9 @@
     color: #FFF;
     text-align: center;
     margin-top: .5em; }
+
+.max-width-container {
+  max-width: 500px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=app.css.map */
