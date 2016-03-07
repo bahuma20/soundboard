@@ -21,7 +21,6 @@ angular.module('soundboardApp').filter('favorized', function() {
      angular.forEach(userData.favs, function(value) {
        if (item.$id == value) {
          isInArray = true;
-         console.log('in array');
        }
      });
 

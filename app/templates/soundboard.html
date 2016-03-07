@@ -26,6 +26,14 @@
     <div class="page-content max-width-container">
       <!--<button ng-click="auth.$unauth()">Logout</button>-->
 
+      <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+          <a href class="mdl-tabs__tab is-active" ng-click="setFilterMode('all')">Alle</a>
+          <a href class="mdl-tabs__tab" ng-click="setFilterMode('new')">Neu</a>
+          <a href class="mdl-tabs__tab" ng-click="setFilterMode('favourites')">Favoriten</a>
+        </div>
+      </div>
+
       <div class="mdl-list">
         <div ng-if="entries.length > 0" class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries | orderBy:'title' | filter:filters | favorized:authData:userData:showOnlyFavourites">
           <span class="mdl-list__item-primary-content">

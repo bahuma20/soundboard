@@ -11,6 +11,7 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
   };
   $scope.showOnlyFavourites = false;
   $scope.isArray = angular.isArray;
+  $scope.filterMode = 'all';
 
 
   $scope.auth.$onAuth(function(authData) {
@@ -132,7 +133,7 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
       $scope.userData.favs = [];
     }
 
-    angular.forEach($scope.userData.favs, function(value, key){
+    angular.forEach($scope.userData.favs, function(value){
       if (entry.$id == value) {
         isInArray = true;
       }
@@ -145,5 +146,5 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
     $scope.downloadMode = $scope.downloadMode == false;
   };
 
-  $scope.setFilterMode('all');
+  $scope.setFilterMode($scope.filterMode);
 }]);
