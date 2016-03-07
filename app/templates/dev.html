@@ -1,0 +1,12 @@
+<form ng-submit="saveEntry(entry)">
+  <label>Title: </label><input type="text" ng-model="entry.title"><br>
+  <label>File: </label><input type="text" ng-model="entry.file"><br>
+  <label>Play Count: </label><input type="number" ng-model="entry.playCount"><br>
+  <label>
+    <input type="checkbox" ng-checked="entry.new" ng-model="entry.new">
+    Als "neu" markieren
+  </label><br>
+  <input type="submit" value="Speichern">
+</form>
+
+{{entry}}
