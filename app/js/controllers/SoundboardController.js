@@ -5,6 +5,7 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
   $scope.currentlyPlaying = {file: ''};
   $scope.player = null;
   $scope.userData = null;
+  $scope.downloadMode = false;
 
   $scope.auth.$onAuth(function(authData) {
     $scope.authData = authData;
@@ -119,5 +120,9 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
     });
 
     return isInArray;
-  }
+  };
+
+  $scope.toggleDownloadMode = function() {
+    $scope.downloadMode = $scope.downloadMode == false;
+  };
 }]);

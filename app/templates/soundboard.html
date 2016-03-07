@@ -1,7 +1,25 @@
-<div class="mdl-layout mdl-js-layout">
+<div class="soundboard mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">{{soundboard.title}} Soundboard</span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href ng-click="toggleDownloadMode()" ng-show="!downloadMode" id="downloadModeButton">
+          <i class="material-icons">file_download</i>
+        </a>
+        <div class="mdl-tooltip" for="downloadModeButton">
+          Download-Modus
+        </div>
+
+        <a class="mdl-navigation__link" href ng-click="toggleDownloadMode()" ng-show="downloadMode" id="favModeButton">
+          <i class="material-icons">star</i>
+        </a>
+        <div class="mdl-tooltip" for="favModeButton">
+          Favouriten-Modus
+        </div>
+      </nav>
     </div>
   </header>
   <main class="mdl-layout__content">
@@ -18,7 +36,14 @@
             <span>{{entry.title}}</span>
             <span class="mdl-list__item-sub-title">{{entry.playCount}}x abgespielt</span>
           </span>
-          <a class="mdl-list__item-secondary-action" href="" ng-click="toggleFav(entry)"><i class="material-icons fav-star" ng-class="{'inactive': !entryIsFavorized(entry)}">star</i></a>
+
+          <a class="mdl-list__item-secondary-action" ng-if="downloadMode" href="./sounds/{{entry.file}}" download="{{entry.file}}" target="_blank">
+            <i class="material-icons fav-star inactive">file_download</i>
+          </a>
+
+          <a class="mdl-list__item-secondary-action" ng-if="!downloadMode" href="" ng-click="toggleFav(entry)">
+            <i class="material-icons fav-star" ng-class="{'inactive': !entryIsFavorized(entry)}">star</i>
+          </a>
         </div>
       </div>
     </div>

@@ -25,3 +25,11 @@
 .fav-star.inactive {
   color: #757575;
 }
+
+.soundboard {
+  .mdl-navigation {
+    .mdl-navigation__link {
+      padding-right: 0;
+    }
+  }
+}
