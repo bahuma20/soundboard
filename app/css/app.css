@@ -21,6 +21,8 @@
   font-size: .75em;
   position: relative;
   top: -.5em; }
+.soundboard .loader {
+  text-align: center; }
 
 #auth-dialog {
   width: 325px; }

@@ -1,11 +1,17 @@
 angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$firebaseArray', '$routeParams', '$firebaseObject', '$location', 'Auth', function($scope, $firebaseArray, $routeParams, $firebaseObject, $location, Auth) {
   $scope.auth = Auth;
   $scope.soundboard = {};
-  $scope.entries = {};
+  $scope.entries = [];
   $scope.currentlyPlaying = {file: ''};
   $scope.player = null;
   $scope.userData = null;
   $scope.downloadMode = false;
+  $scope.filters = {
+    new: undefined
+  };
+  $scope.showOnlyFavourites = false;
+  $scope.isArray = angular.isArray;
+
 
   $scope.auth.$onAuth(function(authData) {
     $scope.authData = authData;
@@ -18,7 +24,6 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
         $scope.dialog.close();
       }
     }
-
   });
 
   // Dialog Polyfill
@@ -72,11 +77,7 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
   };
 
   $scope.entryCurrentlyPlaying = function(entry) {
-    if(entry.$id == $scope.currentlyPlaying.$id) {
-      return true;
-    } else {
-      return false;
-    }
+    return entry.$id == $scope.currentlyPlaying.$id;
   };
 
   $scope.toggleFav = function(entry) {
@@ -99,6 +100,24 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
     } else {
       $scope.userData.favs.push(entry.$id);
       $scope.userData.$save();
+    }
+  };
+
+  $scope.setFilterMode = function(mode) {
+    switch(mode) {
+      case 'all':
+        $scope.filters.new = undefined;
+        $scope.showOnlyFavourites = false;
+        break;
+
+      case 'new':
+        $scope.filters.new = true;
+        $scope.showOnlyFavourites = false;
+        break;
+
+      case 'favourites':
+        $scope.filters.new = undefined;
+        $scope.showOnlyFavourites = true;
     }
   };
 
@@ -125,4 +144,6 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
   $scope.toggleDownloadMode = function() {
     $scope.downloadMode = $scope.downloadMode == false;
   };
+
+  $scope.setFilterMode('all');
 }]);

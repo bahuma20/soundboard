@@ -27,7 +27,7 @@
       <!--<button ng-click="auth.$unauth()">Logout</button>-->
 
       <div class="mdl-list">
-        <div class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries | orderBy:'title'">
+        <div ng-if="entries.length > 0" class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries | orderBy:'title' | filter:filters | favorized:authData:userData:showOnlyFavourites">
           <span class="mdl-list__item-primary-content">
             <button ng-click="togglePlaySound(entry)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-list__item-avatar" ng-class="{'mdl-button--colored': entryCurrentlyPlaying(entry)}">
               <i class="material-icons" ng-if="!entryCurrentlyPlaying(entry)">play_arrow</i>
@@ -46,6 +46,10 @@
           <a class="mdl-list__item-secondary-action" ng-if="!downloadMode" href="" ng-click="toggleFav(entry)">
             <i class="material-icons fav-star" ng-class="{'inactive': !entryIsFavorized(entry)}">star</i>
           </a>
+        </div>
+
+        <div ng-if="entries.length == 0" class="loader">
+          <div class="mdl-spinner mdl-js-spinner is-active"></div>
         </div>
       </div>
     </div>
