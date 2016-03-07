@@ -1,4 +1,6 @@
-angular.module('soundboardApp').controller('DevController', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+angular.module('soundboardApp').controller('DevController', ['$scope', '$firebaseArray', 'Auth', function($scope, $firebaseArray, Auth) {
+  $scope.auth = Auth;
+
   var entryBoilerplate = {
     file: '',
     playCount: 0,

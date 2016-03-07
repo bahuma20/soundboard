@@ -51,6 +51,14 @@
 
 #auth-dialog {
   width: 325px;
+  position: relative;
+
+  .close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 
   .mdl-dialog__content {
     button {

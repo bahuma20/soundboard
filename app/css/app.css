@@ -25,7 +25,13 @@
   text-align: center; }
 
 #auth-dialog {
-  width: 325px; }
+  width: 325px;
+  position: relative; }
+  #auth-dialog .close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px; }
   #auth-dialog .mdl-dialog__content button {
     width: 100%;
     color: #FFF;

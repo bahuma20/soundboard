@@ -146,5 +146,9 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
     $scope.downloadMode = $scope.downloadMode == false;
   };
 
+  $scope.closeAuthDialog = function() {
+    $scope.dialog.close();
+  };
+
   $scope.setFilterMode($scope.filterMode);
 }]);
