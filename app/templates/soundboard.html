@@ -27,13 +27,15 @@
       <!--<button ng-click="auth.$unauth()">Logout</button>-->
 
       <div class="mdl-list">
-        <div class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries">
+        <div class="mdl-list__item mdl-list__item--two-line" ng-repeat="entry in entries | orderBy:'title'">
           <span class="mdl-list__item-primary-content">
             <button ng-click="togglePlaySound(entry)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-list__item-avatar" ng-class="{'mdl-button--colored': entryCurrentlyPlaying(entry)}">
               <i class="material-icons" ng-if="!entryCurrentlyPlaying(entry)">play_arrow</i>
               <i class="material-icons" ng-if="entryCurrentlyPlaying(entry)">stop</i>
             </button>
-            <span>{{entry.title}}</span>
+
+            <span>{{entry.title}} <span ng-if="entry.new" class="new-indicator">(neu)</span></span>
+
             <span class="mdl-list__item-sub-title">{{entry.playCount}}x abgespielt</span>
           </span>
 

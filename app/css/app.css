@@ -16,6 +16,11 @@
   padding-right: 16px; }
 .soundboard .mdl-navigation .mdl-navigation__link {
   padding-right: 0; }
+.soundboard .new-indicator {
+  color: red;
+  font-size: .75em;
+  position: relative;
+  top: -.5em; }
 
 #auth-dialog {
   width: 325px; }
