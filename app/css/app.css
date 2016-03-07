@@ -15,4 +15,12 @@
 .soundboard .mdl-navigation .mdl-navigation__link {
   padding-right: 0; }
 
+#auth-dialog {
+  width: 325px; }
+  #auth-dialog .mdl-dialog__content button {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    margin-top: .5em; }
+
 /*# sourceMappingURL=app.css.map */

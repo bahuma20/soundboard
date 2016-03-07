@@ -53,14 +53,19 @@
 <dialog id="auth-dialog" class="mdl-dialog">
   <h4 class="mdl-dialog__title">Login</h4>
   <div class="mdl-dialog__content">
-    <p>
-      Um Favoriten speichern zu können, müssen Sie sich einloggen.
-      Das geht ganz einfach über Ihr Facebook oder Google-Konto.
-      Wir werden niemals ohne Ihre Erlaubnis etwas posten.
-    </p>
+    <p>Um Favoriten speichern zu können, müssen Sie sich einloggen.</p>
+    <p>Das geht ganz einfach über Ihr Facebook oder Google-Konto.</p>
+    <p>Wir werden niemals ohne Ihre Erlaubnis etwas posten.</p>
+
+    <button type="button" class="mdl-button" ng-click="auth.$authWithOAuthPopup('facebook')" style="background-color: #3b5998; color: #FFF">
+      Mit Facebook einloggen
+    </button>
+
+    <button type="button" class="mdl-button close" ng-click="auth.$authWithOAuthPopup('google')" style="background-color: #dc4e41; color: #FFF">
+      Mit Google einloggen
+    </button>
   </div>
   <div class="mdl-dialog__actions">
-    <button type="button" class="mdl-button" ng-click="auth.$authWithOAuthPopup('facebook')">Mit Facebook einloggen</button>
-    <button type="button" class="mdl-button close" ng-click="auth.$authWithOAuthPopup('google')">Mit Google einloggen</button>
+
   </div>
 </dialog>
