@@ -7,7 +7,8 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
   $scope.userData = null;
   $scope.downloadMode = false;
   $scope.filters = {
-    new: undefined
+    new: undefined,
+    title: undefined
   };
   $scope.showOnlyFavourites = false;
   $scope.isArray = angular.isArray;

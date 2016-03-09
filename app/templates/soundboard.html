@@ -26,6 +26,19 @@
     <div class="page-content max-width-container">
       <!--<button ng-click="auth.$unauth()">Logout</button>-->
 
+
+
+      <div class="search">
+        <i class="material-icons">search</i>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="searchBox" ng-model="filters.title">
+          <label class="mdl-textfield__label" for="searchBox">Suche...</label>
+        </div>
+
+        <i class="material-icons" ng-click="filters.title = ''" ng-if="filters.title">close</i>
+      </div>
+
       <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
           <a href class="mdl-tabs__tab is-active" ng-click="setFilterMode('all')">Alle</a>
