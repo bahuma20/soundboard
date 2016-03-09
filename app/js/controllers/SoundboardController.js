@@ -62,7 +62,7 @@ angular.module('soundboardApp').controller('SoundboardController', ['$scope', '$
       $scope.currentlyPlaying = entry;
 
       // Play The audio
-      $scope.player = new Audio('./sounds/' + entry.file);
+      $scope.player = new Audio('./board-data/' + $scope.soundboard.slug + '/sounds/' + entry.file);
       $scope.player.play();
 
       // Set buttons inactive when audio finished
