@@ -9,9 +9,12 @@
   .page-content .entry:last-child {
     margin-bottom: 0; }
 
-.fav-star.inactive {
-  color: #757575; }
+.soundboard-list .image img {
+  width: 100%;
+  height: auto; }
 
+.soundboard .fav-star.inactive {
+  color: #757575; }
 .soundboard .mdl-layout__header-row {
   padding-right: 16px; }
 .soundboard .mdl-navigation .mdl-navigation__link {

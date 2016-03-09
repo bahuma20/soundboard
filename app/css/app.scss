@@ -22,11 +22,20 @@
   }
 }
 
-.fav-star.inactive {
-  color: #757575;
+.soundboard-list {
+  .image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .soundboard {
+  .fav-star.inactive {
+    color: #757575;
+  }
+
   .mdl-layout__header-row {
     padding-right: 16px;
   }
