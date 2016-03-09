@@ -13,11 +13,11 @@ $ npm start
 
 ## TODO
 
-- [ ] Download-Button
-- [ ] Max-width of the soundboard item list
-- [ ] New-Indicator
-- [ ] Tabs for filtering by "All", "New", "Favourites"
-- [ ] Search Field
+- [x] Download-Button
+- [x] Max-width of the soundboard item list
+- [x] New-Indicator
+- [x] Tabs for filtering by "All", "New", "Favourites"
+- [x] Search Field
 - [ ] Overview Page
 - [ ] Login-Button and Logout-Button
 
