@@ -60,7 +60,7 @@
             <span class="mdl-list__item-sub-title">{{entry.playCount}}x abgespielt</span>
           </span>
 
-          <a class="mdl-list__item-secondary-action" ng-if="downloadMode" href="./sounds/{{entry.file}}" download="{{entry.file}}" target="_blank">
+          <a class="mdl-list__item-secondary-action" ng-if="downloadMode" href="./board-data/{{soundboard.slug}}/sounds/{{entry.file}}" download="{{entry.file}}" target="_blank">
             <i class="material-icons fav-star inactive">file_download</i>
           </a>
 
